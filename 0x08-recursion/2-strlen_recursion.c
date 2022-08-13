@@ -1,4 +1,4 @@
-#include "main.h"
+:%s/\s\+$//:%s/\s\+$//#include "main.h"
 
 /**
 * _strlen_recursion -> function to get length of string
@@ -6,7 +6,7 @@
 * Return: length of string
 */
 int _strlen_recursion(char *s)
-{	
+{
 	if (*s == '\0')
 		return (0);
 	s++;
