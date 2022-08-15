@@ -3,11 +3,10 @@
 #include <stdio.h>
 
 /**
- * find_listint_loop_pl - finds a loop in a linked list
- *
- * @head: linked list to search
- *
- * Return: address of node where loop starts/returns, NULL if no loop
+ * print_listint_safe - Print a `listint_t` linked list including mem addresses
+ * @head: head of linked list
+ * Description: Go through the list only once.
+ * Return: number of nodes in list. If fails, exit with status 98.
  */
 size_t print_listint_safe(const listint_t *head)
 {
