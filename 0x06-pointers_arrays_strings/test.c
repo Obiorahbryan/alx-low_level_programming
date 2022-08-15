@@ -5,6 +5,7 @@
  *
  * Return: Always 0.
  */
+void print_number(int);
 int main(void)
 {
     print_number(98);
