@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 
-unsigned int binary_to_uint(const char *b);
+
 /**
  * main - check the code
  *
  * Return: Always 0.
  */
+unsigned int binary_to_uint(const char *);
 int main(void)
 {
     unsigned int n;
