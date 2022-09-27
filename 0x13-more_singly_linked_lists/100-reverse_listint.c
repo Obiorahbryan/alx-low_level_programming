@@ -1,25 +1,33 @@
 #include "lists.h"
 
 /**
- * reverse_listint - reverses a linked list
- * @h: head of the list
- *
- * Return: pointer to the reversed
+ * delete_nodeint_at_index - adds a node to a singly linked list
+ * @h: pointer to head of the list
+ * @idx: position to delete
+ * Return: pointer to new elemnt
  */
-listint_t *reverse_listint(listint_t **h)
+int delete_nodeint_at_index(listint_t **h, unsigned int idx)
 {
-	listint_t *tmp2, *tmp1;
+	unsigned int i = 0;
+	listint_t *tmp = *h, *head = *h;
 
-	if (!h || !(*h))
-		return (NULL);
-	tmp1 = (*h)->next;
-	(*h)->next = NULL;
-	while (tmp1)
+	if (!head || !h)
+		return (-1);
+	if (idx == 0)
 	{
-		tmp2 = *h;
-		*h = tmp1;
-		tmp1 = (*h)->next;
-		(*h)->next = tmp2;
+		*h = head->next;
+		free(head);
+		return (1);
 	}
-	return (*h);
+	while (head && i < idx)
+	{
+		tmp = head;
+		head = head->next;
+		i++;
+	}
+	if (i < idx)
+		return (-1);
+	tmp->next = head->next;
+	free(head);
+	return (1);
 }
