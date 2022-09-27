@@ -1,1 +1,2 @@
-This is more project on singly linkedlist
+#!/bin/bash
+C - More singly linked lists
